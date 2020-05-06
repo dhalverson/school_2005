@@ -2,7 +2,8 @@ class School
 
   attr_reader :start_time,
               :hours_in_school_day,
-              :student_names
+              :student_names,
+              :end_time
   def initialize(start_time, hours_in_school_day)
     @start_time = start_time
     @hours_in_school_day = hours_in_school_day
@@ -13,9 +14,8 @@ class School
     @student_names << name
   end
 
-  def end_time(time)
-    @start_time.to_i + @hours_in_school_day
-  require "pry"; binding.pry
+  def end_time
+    @start_time[0].to_f + @hours_in_school_day
   end
 
 end
